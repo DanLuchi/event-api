@@ -14,12 +14,12 @@ class EventsControllerTest < ActionController::TestCase
   end
 
   test "should show event" do
-    get :show, params: { id: @event }
+    get :show, params: { id: @event.key }
     assert_response :success
   end
 
   test "should update event" do
-    patch :update, params: { id: @event, event: { key: @event.key, text: @event.text } }
+    patch :update, params: { id: @event.key, event: { text: @event.text } }
     assert_response 200
   end
 end
