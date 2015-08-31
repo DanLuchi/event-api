@@ -7,7 +7,7 @@ class EventsControllerTest < ActionController::TestCase
 
   test "should create event" do
     assert_difference('Event.count') do
-      post :create, params: { event: { key: @event.key, text: @event.text } }
+      post :create, params: { event: { key: "new-event", text: @event.text } }
     end
 
     assert_response 201

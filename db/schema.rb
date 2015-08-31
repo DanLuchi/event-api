@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150817183825) do
+ActiveRecord::Schema.define(version: 20150831183043) do
 
   create_table "events", force: :cascade do |t|
     t.string   "key"
     t.string   "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["key"], name: "index_events_on_key", unique: true
   end
 
 end
